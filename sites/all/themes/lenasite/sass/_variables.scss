@@ -1,0 +1,91 @@
+// font family
+$font-family-main : proxima-nova, Verdana, sans-serif;
+$font-family-main-bold : proxima-nova-bold, Verdana, sans-serif;
+$font-family-main-light : proxima-nova-light, Verdana, sans-serif;
+$font-family-icon : FontAwesome;
+// font size
+$font-size-base : 16px;
+$font-size-heading-base : 20px;
+$font-size-h1 : $font-size-heading-base * 2;
+$font-size-h2 : $font-size-heading-base * 1.5;
+$font-size-h3 : $font-size-heading-base;
+$font-size-h4 : $font-size-base;
+$font-size-h5 : $font-size-heading-base * 0.8;
+$font-size-h6 : $font-size-heading-base * 0.7;
+
+// header colors
+
+$header-bgr : rgba(255, 255, 255, 0.5);
+
+// color palettes
+
+// main pallet
+
+$color-main-1 : #FFC46C;
+$color-main-1-base : #FFD9A0;
+$color-main-1-light : #FFF5E7;
+$color-main-1-dark : #E7A23C;
+$color-main-1-darker : #935F12;
+$color-main-2 : #a953be;
+$color-main-2-base : #d392e4;
+$color-main-2-light : #f8e5fd;
+$color-main-2-darker : #832b98;
+$color-main-2-darker : #510f61;
+$color-main-3 : #c4f266;
+$color-main-3-base : #dbfa9d;
+$color-main-3-light : #f6ffe6;
+$color-main-3-dark : #a2d738;
+$color-main-3-darker : #618911;
+
+// primary
+$color-primary-1 : #006892;
+$color-primary-1-base : #098BB1;
+$color-primary-1-dark : #004666;
+$color-primary-1-light : #A0C7DD;
+$color-primary-2 : #B38808;
+$color-primary-2-base : #E7C61E;
+$color-primary-2-dark : #997729;
+$color-primary-2-light : #F7DF71;
+$color-primary-3 : #7D0049;
+$color-primary-3-base : #90597A;
+$color-primary-3-dark : #6C2B5A;
+$color-primary-3-light : #BEA2BE;
+$color-primary-4 : #D9531E;
+$color-primary-4-base : #CC4B3A;
+$color-primary-4-dark : #9C4A41;
+$color-primary-4-light : #E77D7E;
+// secodary
+$color-secondary-1 : #717073;
+$color-secondary-1-base : #919396;
+$color-secondary-1-dark : #5A5B5D;
+$color-secondary-1-light : #C0C2C4;
+$color-secondary-2 : #F6A01A;
+$color-secondary-2-base : #D56B4A;
+$color-secondary-2-dark : #AC5F0F;
+$color-secondary-2-light : #F1B570;
+$color-secondary-3 : #A3A510;
+$color-secondary-3-base : #849E49;
+$color-secondary-3-dark : #576B3F;
+$color-secondary-3-light : #E1D659;
+$color-secondary-4 : #443D38;
+$color-secondary-4-light : #78777A;
+// tertiary
+// colors for alerts and tables
+$color-tertiary-1 : #FFF;
+$color-tertiary-1-base : #DDD;
+$color-tertiary-1-dark : #999;
+$color-tertiary-1-light : #F5F5F5;
+$color-tertiary-2 : #F1F1F2;
+$color-tertiary-2-base : #CCC;
+$color-tertiary-2-dark : #666;
+$color-tertiary-2-light : #F0F0F0;
+$color-tertiary-3 : #D8D8D9;
+$color-tertiary-3-light : #EEE;
+$color-tertiary-4-light : #FFE6E6;
+$color-tertiary-5-light : #E7F2F7;
+$color-tertiary-6-light : #EDFCCA;
+$color-tertiary-7 : #E7C61E;
+$color-tertiary-7-base : #F7DF71;
+$color-tertiary-7-medium : #C59A1D;
+$color-tertiary-7-dark : #957510;
+$color-tertiary-7-light : #FBEFB9;

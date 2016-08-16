@@ -1,0 +1,33 @@
+#navbar {
+  @include override-container;
+  background    : $header-bgr;
+  border-bottom : 2px solid $color-main-2-darker;
+  border-radius : 0;
+  height        : 120px;
+  .navbar-header {
+    margin-left : 10%;
+    width       : 20%;
+    float       : left;
+    a.logo {
+      img {
+        width  : 100px;
+        height : auto;
+      }
+    }
+    .navbar-brand {
+      display : none;
+    }
+  }
+  .navbar-collapse {
+    margin-right : 10%;
+    width        : 60%;
+    float        : right;
+    ul {
+      li {
+        a {
+          color : $color-main-2-darker;
+        }
+      }
+    }
+  }
+}
