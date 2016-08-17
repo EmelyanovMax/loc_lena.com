@@ -1,0 +1,32 @@
+#block-views-user-page-block-1 {
+  background    : $color-main-3;
+  border-top    : 3px solid $color-main-2;
+  border-bottom : 3px solid $color-main-2;
+  .block-title {
+    display : none;
+  }
+  .view-user-page {
+    max-width : 768px;
+    margin    : 0 auto;
+    padding   : 15px;
+    .view-content {
+      overflow : hidden;
+      margin   : 40px 0;
+      .views-row {
+        float        : left;
+        width        : 32%;
+        margin-right : 2%;
+        text-align   : center;
+        &:nth-child(3n) {
+          margin-right : 0;
+        }
+        .views-field-picture {
+          img {
+            margin : 0 auto;
+          }
+          margin-bottom : 20px;
+        }
+      }
+    }
+  }
+}

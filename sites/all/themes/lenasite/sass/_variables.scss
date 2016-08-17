@@ -1,7 +1,8 @@
 // font family
-$font-family-main : proxima-nova, Verdana, sans-serif;
-$font-family-main-bold : proxima-nova-bold, Verdana, sans-serif;
-$font-family-main-light : proxima-nova-light, Verdana, sans-serif;
+$font-family-main : fira_sansregular, proxima-nova, Verdana, sans-serif;
+$font-family-main-bold : fira_sansbold, proxima-nova-bold, Verdana, sans-serif;
+$font-family-main-light : fira_sanslight, proxima-nova-light, Verdana, sans-serif;
+$font-family-main-medium : fira_sansmedium;
 $font-family-icon : FontAwesome;
 // font size
 $font-size-base : 16px;
@@ -15,7 +16,7 @@ $font-size-h6 : $font-size-heading-base * 0.7;
 
 // header colors
 
-$header-bgr : rgba(255, 255, 255, 0.5);
+$header-bgr : rgba(255, 255, 255, 0.7);
 
 // color palettes
 
@@ -26,15 +27,15 @@ $color-main-1-base : #FFD9A0;
 $color-main-1-light : #FFF5E7;
 $color-main-1-dark : #E7A23C;
 $color-main-1-darker : #935F12;
-$color-main-2 : #a953be;
-$color-main-2-base : #d392e4;
-$color-main-2-light : #f8e5fd;
-$color-main-2-darker : #832b98;
-$color-main-2-darker : #510f61;
-$color-main-3 : #c4f266;
-$color-main-3-base : #dbfa9d;
-$color-main-3-light : #f6ffe6;
-$color-main-3-dark : #a2d738;
+$color-main-2 : #A953BE;
+$color-main-2-base : #D392E4;
+$color-main-2-light : #F8E5FD;
+$color-main-2-dark : #832B98;
+$color-main-2-darker : #510F61;
+$color-main-3 : #C4F266;
+$color-main-3-base : #DBFA9D;
+$color-main-3-light : #F6FFE6;
+$color-main-3-dark : #A2D738;
 $color-main-3-darker : #618911;
 
 // primary

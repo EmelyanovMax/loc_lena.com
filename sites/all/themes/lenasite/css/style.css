@@ -15,3 +15,65 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'fira_sansregular';
+  src: url('../fonts/FiraSans/firasans-regular-webfont.eot');
+  src: url('../fonts/FiraSans/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans/firasans-regular-webfont.woff2') format('woff2'),
+  url('../fonts/FiraSans/firasans-regular-webfont.woff') format('woff'),
+  url('../fonts/FiraSans/firasans-regular-webfont.ttf') format('truetype'),
+  url('../fonts/FiraSans/firasans-regular-webfont.svg#fira_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'fira_sansbold';
+  src: url('../fonts/FiraSans/firasans-bold-webfont.eot');
+  src: url('../fonts/FiraSans/firasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans/firasans-bold-webfont.woff2') format('woff2'),
+  url('../fonts/FiraSans/firasans-bold-webfont.woff') format('woff'),
+  url('../fonts/FiraSans/firasans-bold-webfont.ttf') format('truetype'),
+  url('../fonts/FiraSans/firasans-bold-webfont.svg#fira_sansbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'fira_sanslight';
+  src: url('../fonts/FiraSans/firasans-light-webfont.eot');
+  src: url('../fonts/FiraSans/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans/firasans-light-webfont.woff2') format('woff2'),
+  url('../fonts/FiraSans/firasans-light-webfont.woff') format('woff'),
+  url('../fonts/FiraSans/firasans-light-webfont.ttf') format('truetype'),
+  url('../fonts/FiraSans/firasans-light-webfont.svg#fira_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'fira_sansmedium';
+  src: url('../fonts/FiraSans/firasans-medium-webfont.eot');
+  src: url('../fonts/FiraSans/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans/firasans-medium-webfont.woff2') format('woff2'),
+  url('../fonts/FiraSans/firasans-medium-webfont.woff') format('woff'),
+  url('../fonts/FiraSans/firasans-medium-webfont.ttf') format('truetype'),
+  url('../fonts/FiraSans/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}

@@ -1,0 +1,25 @@
+#block-views-frontpage-block-1 {
+  max-width : 768px;
+  margin    : 0 auto 40px;
+  padding   : 15px;
+  .views-label {
+    display : none;
+  }
+  .views-field.views-field-field-image {
+    img {
+      margin : 0 auto;
+    }
+  }
+  .views-field.views-field-title {
+    font-family : $font-family-main-bold;
+    font-size   : 40px;
+    text-align  : center;
+  }
+  .views-field.views-field-body {
+    .field-content {
+      font-family : $font-family-main-medium;
+      font-size   : 24px;
+      text-align  : center;
+    }
+  }
+}

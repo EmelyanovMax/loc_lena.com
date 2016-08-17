@@ -1,0 +1,52 @@
+.node-article,
+.node-photo {
+  max-width : 768px;
+  margin    : 0 auto 40px;
+  padding   : 15px;
+  .field-label {
+    display : none;
+  }
+  header {
+    margin-bottom : 20px;
+    .submitted {
+      display  : table;
+      overflow : hidden;
+      .user-picture {
+        border-radius  : 50%;
+        overflow       : hidden;
+        display        : table-cell;
+        width          : 70px;
+        vertical-align : bottom;
+      }
+      span {
+        display        : table-cell;
+        vertical-align : bottom;
+        padding-left   : 15px;
+      }
+    }
+  }
+  .field-name-field-image {
+    img {
+      margin : 0 auto;
+    }
+  }
+  .field-name-body {
+    font-size     : 18px;
+    font-family   : $font-family-main-light;
+    background    : rgba(255, 255, 255, 0.7);
+    padding       : 40px;
+    border-radius : 10px;
+    border        : 1px solid #CCC;
+    margin-top    : 40px;
+  }
+  footer {
+    margin : 20px 0;
+    float  : right;
+    ul {
+      margin : 0;
+    }
+    a {
+      @include btn-style;
+    }
+  }
+}

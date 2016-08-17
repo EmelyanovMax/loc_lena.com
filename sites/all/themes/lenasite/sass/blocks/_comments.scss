@@ -1,0 +1,28 @@
+#comments {
+  background    : rgba(255, 255, 255, 0.7);
+  padding       : 40px;
+  border-radius : 6px;
+  border        : 1px solid #CCC;
+  clear         : both;
+  .title {
+    font-size   : 18px;
+    margin      : 0 0 20px;
+    color       : $color-main-2;
+    font-family : $font-family-main-bold;
+  }
+  .comment {
+    background    : rgba(219, 250, 157, 0.4);
+    border        : 1px solid $color-main-2-base;
+    padding       : 40px;
+    border-radius : 6px;
+    margin-bottom : 30px;
+    .user-picture {
+      display       : inline-block;
+      border-radius : 50%;
+      overflow      : hidden;
+    }
+    a{
+      color: $color-main-2-dark;
+    }
+  }
+}

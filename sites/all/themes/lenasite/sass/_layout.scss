@@ -1,3 +1,32 @@
-body{
-  background: $color-main-1-light;
+body {
+  background-image  : url("../images/background.png");
+  background-repeat : repeat;
+  color             : #000;
+  position          : relative;
+  padding-bottom    : 100px;
+  min-height        : 100vh;
+  .main-container.container {
+    h1.page-header {
+      display : none;
+    }
+  }
+  &.front {
+    .main-container.container {
+      @include override-container;
+    }
+    .row {
+      margin : 0;
+    }
+    .col-sm-12 {
+      padding : 0;
+    }
+  }
+  .row {
+    margin : 120px 0 0 0;
+  }
+  .form-actions {
+    button {
+      @include btn-style;
+    }
+  }
 }

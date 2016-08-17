@@ -1,7 +1,15 @@
 @import "variables";
 @import "breakpoints";
 @import "mixins";
-
 @import "layout";
 @import "header";
 @import "footer";
+// blocks
+@import "blocks/block-system-main";
+@import "blocks/block-views-frontpage-block-1";
+@import "blocks/block-views-user-page-block-1";
+@import "blocks/owl-carousel-block";
+@import "blocks/block-views-gallery-block-1";
+@import "blocks/comments";
+//nodes
+@import "nodes/about-us";

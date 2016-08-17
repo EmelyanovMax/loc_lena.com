@@ -4,10 +4,14 @@
   border-bottom : 2px solid $color-main-2-darker;
   border-radius : 0;
   height        : 120px;
+  z-index       : 1;
   .navbar-header {
-    margin-left : 10%;
-    width       : 20%;
+    margin-left : 100px;
+    width       : 100px;
     float       : left;
+    position    : absolute;
+    bottom      : 0;
+    left        : 0;
     a.logo {
       img {
         width  : 100px;
@@ -19,13 +23,96 @@
     }
   }
   .navbar-collapse {
-    margin-right : 10%;
-    width        : 60%;
+    margin-right : 100px;
+    width        : 100%;
+    padding-left : 340px;
     float        : right;
-    ul {
-      li {
+    ul.menu.nav.navbar-nav {
+      height : 120px !important;
+      > li {
+        float   : none;
+        display : inline-block;
+        height  : 100%;
         a {
-          color : $color-main-2-darker;
+          line-height : 120px;
+          padding     : 0 40px;
+          color       : $color-main-2-darker;
+          font-size   : 18px;
+          font-family : $font-family-main-bold;
+          font-weight : bold;
+          transition  : all 0.3s ease 0s;
+          &:hover {
+            background : $color-main-2-dark;
+            color      : $color-tertiary-1;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint('lg-') {
+    .navbar-header {
+      margin-left : 50px;
+    }
+    .navbar-collapse {
+      margin-right : 50px;
+      padding-left : 220px;
+      ul.menu.nav.navbar-nav {
+        > li {
+          a {
+            padding : 0 20px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint('m-') {
+    .navbar-header {
+      margin-left : 15px;
+    }
+    .navbar-collapse {
+      margin-right : 15px;
+      padding-left : 145px;
+      ul.menu.nav.navbar-nav {
+        > li {
+          a {
+            padding : 0 20px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint('s-') {
+    .navbar-header {
+      width       : 100%;
+      margin-left : 0;
+      position    : relative;
+      .navbar-toggle {
+        border-color : $color-main-2-darker;
+        margin-top   : 40px;
+        .icon-bar {
+          background-color : $color-main-2-darker;
+        }
+        &:hover,
+        &:focus {
+          background : $header-bgr;
+        }
+      }
+    }
+    .navbar-collapse {
+      margin        : 0;
+      padding       : 0px;
+      background    : $color-tertiary-1;
+      border-bottom : 4px solid $color-main-3;
+      ul.menu.nav.navbar-nav {
+        margin : 0;
+        height : auto !important;
+        float  : none !important;
+        > li {
+          display : block;
+          a {
+            padding     : 20px;
+            line-height : normal
+          }
         }
       }
     }

@@ -88,24 +88,26 @@
 @mixin btn-style {
   background     : transparent;
   border         : 1px solid $color-tertiary-2-base;
-  @include border-radius(2px);
-  color          : $color-theme-1 !important;
+  @include border-radius(6px);
+  color          : $color-main-2 !important;
   box-sizing     : border-box;
   @include element-transition(all 0.3s ease);
   font-size      : $font-size-base;
+  font-family    : $font-family-main-bold;
   text-transform : uppercase;
-  padding        : 13px 20px 7px;
+  padding        : 5px 10px;
   line-height    : normal;
   width          : auto;
-  min-height     : 43px;
+  min-height     : 40px;
   display        : inline-block;
   text-shadow    : none;
   box-shadow     : none;
   &:hover,
   &:focus {
-    background-color : $color-theme-1;
-    border-color     : $color-theme-1;
+    background-color : $color-main-2;
+    border-color     : $color-main-2;
     color            : $color-tertiary-1 !important;
+    text-decoration  : none;
   }
   @include breakpoint('s-') {
     width      : 100%;
@@ -187,7 +189,7 @@
   &:after {
     display       : block;
     content       : '';
-    border-bottom : 2px solid $color-theme-1;
+    border-bottom : 2px solid $color-main-2;
     width         : 35px;
     position      : absolute;
     top           : -5px;
@@ -541,12 +543,12 @@
       font-family    : $font-family-main-bold;
       font-size      : 16px;
       &:hover {
-        background-color : $color-theme-1;
+        background-color : $color-main-2;
         color            : $color-tertiary-1;
       }
     }
     &.open > ul.dropdown-menu {
-      border-top : 4px solid $color-theme-1;
+      border-top : 4px solid $color-main-2;
     }
     ul,
     ul.dropdown-menu {
@@ -566,7 +568,7 @@
           @include border-radius(2px);
         }
         h3 {
-          @include title-style($color-theme-1, 24px);
+          @include title-style($color-main-2, 24px);
         }
       }
       .container > li {
@@ -577,7 +579,7 @@
         > a {
           display  : block;
           position : relative;
-          @include title-style($color-theme-1, 24px);
+          @include title-style($color-main-2, 24px);
           @include white-line;
           &:hover {
             box-shadow : none;
@@ -595,7 +597,7 @@
     }
     &.open {
       > a {
-        background-color : $color-theme-1;
+        background-color : $color-main-2;
         color            : $color-tertiary-1;
       }
     }
@@ -616,7 +618,7 @@
           > a {
             display  : block;
             position : relative;
-            @include title-style($color-theme-1, 24px);
+            @include title-style($color-main-2, 24px);
             @include white-line;
           }
           ul.dropdown-menu {

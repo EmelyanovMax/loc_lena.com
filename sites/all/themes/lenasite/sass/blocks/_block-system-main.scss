@@ -1,0 +1,63 @@
+.front #block-system-main {
+  height              : 100vh;
+  background-image    : url("../images/image2.jpg");
+  background-size     : cover;
+  background-repeat   : no-repeat;
+  background-position : bottom;
+  position            : relative;
+  box-shadow          : 0 0 100px $color-main-3-light;
+  margin-bottom       : 100px;
+  border-bottom       : 3px solid $color-main-2;
+  .view-frontpage {
+    padding-top  : 15%;
+    padding-left : 15%;
+    ul {
+      padding : 0;
+      li {
+        list-style : none;
+        .views-field-title a,
+        .views-field-title a:focus,
+        .views-field-title a:visited {
+          color          : $color-tertiary-1;
+          font-size      : 75px;
+          text-transform : uppercase;
+          font-family    : $font-family-main-bold;
+          transition     : all 0.3s ease 0s;
+          &:hover {
+            color           : $color-main-3;
+            text-decoration : none;
+          }
+        }
+        .views-field-title-1 {
+          position      : absolute;
+          bottom        : 100px;
+          right         : 100px;
+          border        : 3px solid $color-tertiary-1;
+          width         : 80px;
+          height        : 80px;
+          border-radius : 50%;
+          cursor        : pointer;
+          font-size     : 0;
+          overflow      : hidden;
+          &:after {
+            display     : block;
+            position    : relative;
+            font-family : $font-family-icon;
+            font-size   : 30px;
+            content     : "\f078";
+            padding     : 15px 22px;
+            color       : $color-tertiary-1;
+            text-shadow : 0 0 5px rgba(0, 0, 0, 0.3);
+          }
+          transition    : all 0.3s ease 0s;
+          &:hover {
+            background : $color-main-3;
+          }
+        }
+        .views-field-field-image {
+          display : none;
+        }
+      }
+    }
+  }
+}

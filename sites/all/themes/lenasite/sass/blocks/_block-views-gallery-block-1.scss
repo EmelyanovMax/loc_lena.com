@@ -1,0 +1,44 @@
+#block-views-gallery-block-1 {
+  margin : 40px 0;
+  .block-title {
+    font-family : $font-family-main-bold;
+    font-size   : 48px;
+    text-align  : center;
+    color       : $color-main-2;
+  }
+  .owl-carousel .owl-buttons {
+    top : 40%;
+  }
+  .view-gallery {
+    .view-content {
+      height : auto !important;
+    }
+  }
+}
+
+.view-gallery {
+  .views-row {
+    float        : left;
+    width        : 32%;
+    margin-right : 2%;
+    text-align   : center;
+    &:nth-child(3n) {
+      margin-right : 0;
+    }
+    header h2 a {
+      display       : block;
+      font-size     : 22px;
+      font-family   : $font-family-main-bold;
+      color         : $color-main-2;
+      text-overflow : ellipsis;
+      overflow      : hidden;
+      white-space   : nowrap;
+    }
+    .views-field-picture {
+      img {
+        margin : 0 auto;
+      }
+      margin-bottom : 20px;
+    }
+  }
+}
