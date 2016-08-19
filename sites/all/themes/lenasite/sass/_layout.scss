@@ -1,16 +1,25 @@
 body {
-  background-image  : url("../images/background.png");
-  background-repeat : repeat;
-  color             : #000;
-  position          : relative;
-  padding-bottom    : 100px;
-  min-height        : 100vh;
+    background-image  : url("../images/Untitled-1.png");
+    background-repeat : repeat;
+//  background: rgba(212,146,228,0.46);
+//  background: -moz-linear-gradient(left, rgba(212,146,228,0.46) 0%, rgba(219,250,157,0.34) 45%, rgba(246,255,230,0.33) 50%, rgba(219,250,157,0.32) 55%, rgba(169,83,190,0.2) 100%);
+//  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,146,228,0.46)), color-stop(45%, rgba(219,250,157,0.34)), color-stop(50%, rgba(246,255,230,0.33)), color-stop(55%, rgba(219,250,157,0.32)), color-stop(100%, rgba(169,83,190,0.2)));
+//  background: -webkit-linear-gradient(left, rgba(212,146,228,0.46) 0%, rgba(219,250,157,0.34) 45%, rgba(246,255,230,0.33) 50%, rgba(219,250,157,0.32) 55%, rgba(169,83,190,0.2) 100%);
+//  background: -o-linear-gradient(left, rgba(212,146,228,0.46) 0%, rgba(219,250,157,0.34) 45%, rgba(246,255,230,0.33) 50%, rgba(219,250,157,0.32) 55%, rgba(169,83,190,0.2) 100%);
+//  background: -ms-linear-gradient(left, rgba(212,146,228,0.46) 0%, rgba(219,250,157,0.34) 45%, rgba(246,255,230,0.33) 50%, rgba(219,250,157,0.32) 55%, rgba(169,83,190,0.2) 100%);
+//  background: linear-gradient(to right, rgba(212,146,228,0.46) 0%, rgba(219,250,157,0.34) 45%, rgba(246,255,230,0.33) 50%, rgba(219,250,157,0.32) 55%, rgba(169,83,190,0.2) 100%);
+//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d492e4', endColorstr='#a953be', GradientType=1 );
+  color            : #000;
+  position         : relative;
+  padding-bottom   : 140px;
+  min-height       : 100vh;
   .main-container.container {
     h1.page-header {
       display : none;
     }
   }
   &.front {
+    padding-bottom : 100px;
     .main-container.container {
       @include override-container;
     }
@@ -30,3 +39,32 @@ body {
     }
   }
 }
+
+.breadcrumb {
+  margin-top    : 40px;
+  background    : rgba(255, 255, 255, 0.7);
+  padding       : 20px 40px;
+  border-radius : 6px;
+  border        : 1px solid #CCC;
+  clear         : both;
+  li {
+    a {
+      color       : $color-main-2-dark;
+      font-family : $font-family-main-bold;
+    }
+  }
+}
+
+.view ul.pager.pager-load-more {
+  clear : both;
+  li > a {
+    @include btn-style;
+    opacity : 1;
+  }
+}
+
+//.view {
+//  background    : rgba(255, 255, 255, 0.8);
+//  border-radius : 6px;
+//  padding       : 5px;
+//}

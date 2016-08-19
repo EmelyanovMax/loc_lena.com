@@ -60,4 +60,13 @@
       }
     }
   }
+  @include breakpoint('s-') {
+    height : 500px;
+    .view-frontpage {
+      padding-top : 160px;
+      ul li .views-field-title-1 {
+        display : none;
+      }
+    }
+  }
 }

@@ -8,6 +8,12 @@
   }
   header {
     margin-bottom : 20px;
+    h2 a{
+      font-family : $font-family-main-bold;
+      font-size   : 48px;
+      text-align  : center;
+      color       : $color-main-2;
+    }
     .submitted {
       display  : table;
       overflow : hidden;
@@ -27,7 +33,9 @@
   }
   .field-name-field-image {
     img {
-      margin : 0 auto;
+      max-height : 216px;
+      width      : auto;
+      margin     : 0 auto;
     }
   }
   .field-name-body {
@@ -47,6 +55,11 @@
     }
     a {
       @include btn-style;
+    }
+  }
+  @include breakpoint('s-') {
+    footer {
+      float: none;
     }
   }
 }

@@ -1,0 +1,12 @@
+#block-views-my-photo-block {
+  .block-title {
+    font-family   : $font-family-main-bold;
+    font-size     : 48px;
+    text-align    : center;
+    color         : $color-main-2;
+    margin-bottom : 40px;
+  }
+  .view-my-photo{
+    @include three-row;
+  }
+}

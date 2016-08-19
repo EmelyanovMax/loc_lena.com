@@ -1,4 +1,5 @@
-#comments {
+#comments,
+.comment-form {
   background    : rgba(255, 255, 255, 0.7);
   padding       : 40px;
   border-radius : 6px;
@@ -21,8 +22,14 @@
       border-radius : 50%;
       overflow      : hidden;
     }
-    a{
-      color: $color-main-2-dark;
+    a {
+      color : $color-main-2-dark;
+    }
+  }
+  @include breakpoint('m-') {
+    padding : 20px;
+    .comment {
+      padding : 20px;
     }
   }
 }

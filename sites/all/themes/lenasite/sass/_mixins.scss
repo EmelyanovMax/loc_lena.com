@@ -122,527 +122,62 @@
   color  : $color-tertiary-1 !important;
 }
 
-// inputs, textareas
-
-@mixin text-field {
-  background  : $color-tertiary-1;
-  border      : 0;
-  line-height : 2.5;
-  height      : auto;
-  padding     : 0 15px;
-  font-size   : 16px;
-  @include border-radius(0px);
-}
-
-@mixin input-style {
-  @include border-radius(0);
-  line-height : normal;
-  padding     : 5px 10px;
-  font-size   : 16px;
-  border      : 1px solid $color-tertiary-2-base;
-  min-height  : 43px;
-}
-
-// text styles
-
-@mixin title-style($color, $size) {
-  font-size      : $size;
-  font-family    : $font-family-main-bold;
-  color          : $color;
-  margin         : 20px 0 30px;
-  text-transform : uppercase;
-}
-
-@mixin li-elem {
-  position   : static;
-  display    : block;
-  padding    : 0;
-  box-shadow : none;
-  margin     : 0;
-  > li {
-    padding    : 10px 20px;
-    margin     : 0;
-    list-style : none;
-    a {
-      padding : 0;
-      color   : $color-tertiary-1;
+@mixin three-row {
+  overflow : hidden;
+  margin   : 40px 0;
+  .views-row {
+    float         : left;
+    width         : 32%;
+    margin-right  : 2%;
+    margin-bottom : 20px;
+    text-align    : center;
+    &:nth-child(3n) {
+      margin-right : 0;
     }
-    &:last-child {
-      border : none;
-    }
-  }
-}
-
-@mixin white-line {
-  &:after {
-    display       : block;
-    content       : '';
-    border-bottom : 1px solid $color-tertiary-1;
-    width         : 35px;
-    position      : absolute;
-    bottom        : -5px;
-  }
-}
-
-@mixin green-line {
-  position : relative;
-  &:after {
-    display       : block;
-    content       : '';
-    border-bottom : 2px solid $color-main-2;
-    width         : 35px;
-    position      : absolute;
-    top           : -5px;
-  }
-}
-
-@mixin alert-mixin($type) {
-  @if ($type == info) {
-    $color : $color-primary-1-base;
-    background   : transparent !important;
-    color        : $color-theme-4;
-    border-color : $color;
-    a,
-    strong,
-    h1, h2, h3, h4, h5, h6 {
-      color : $color !important;
-    }
-    a:hover {
-      border-color     : $color !important;
-      background-color : $color !important;
-      color            : $color-tertiary-1 !important;
-    }
-  }
-  @if ($type == error) {
-    $color : #F00;
-    background   : transparent !important;
-    color        : $color-theme-4;
-    border-color : $color;
-    a,
-    strong,
-    h1, h2, h3, h4, h5, h6 {
-      color : $color !important;
-    }
-    a:hover {
-      border-color     : $color !important;
-      background-color : $color !important;
-      color            : $color-tertiary-1 !important;
-    }
-  }
-  @if ($type == warning) {
-    $color : #03A9F4;
-    background   : transparent !important;
-    color        : $color-theme-4;
-    border-color : $color;
-    a,
-    strong,
-    h1, h2, h3, h4, h5, h6 {
-      color : $color !important;
-    }
-    a:hover {
-      border-color     : $color !important;
-      background-color : $color !important;
-      color            : $color-tertiary-1 !important;
-    }
-  }
-}
-
-// images
-
-@mixin full-size-image {
-  img {
-    max-width : 100%;
-    width     : auto;
-    height    : auto;
-  }
-}
-
-// blocks
-
-// Bootstrap container width
-@mixin bootstrap-container() {
-  margin-right : auto;
-  margin-left  : auto;
-  padding      : 20px 15px 40px;
-  @include breakpoint("m+") {
-    width : $screen-m-container;
-  }
-  @include breakpoint("l+") {
-    width : $screen-l-container;
-  }
-  @include breakpoint("xl") {
-    width : $screen-xl-container;
-  }
-}
-
-@mixin share-block($color, $hover-color) {
-  a {
-    margin-right : 7px;
-    color        : $color;
-    .fa-stack {
-      border        : 3px solid $color;
-      border-radius : 7px;
-      width         : 35px;
-      height        : 35px;
-      line-height   : 1.7em;
-      .fa {
-        color : $color;
-      }
-    }
-    &:hover {
-      .fa-stack {
-        border-color : $hover-color;
-        .fa {
-          color : $hover-color;
-        }
-      }
-    }
-  }
-}
-
-@mixin share-block-transparent($color, $hover-color) {
-  @include share-block($color, $hover-color);
-  a {
-    .fa-stack {
-      background : transparent;
-    }
-  }
-}
-
-@mixin override-container {
-  max-width     : inherit !important;
-  padding-left  : 0 !important;
-  padding-right : 0 !important;
-  margin-top    : 0;
-  margin-bottom : 0;
-  border        : 0;
-  text-shadow   : none;
-  width         : 100%;
-  //position      : relative;
-}
-
-@mixin main-search-block {
-  clear    : both;
-  position : absolute;
-  top      : 0;
-  right    : 112px;
-  z-index  : 10;
-  height   : 100px;
-  form {
-    width    : 90px;
-    position : static;
-    * {
-      box-sizing : border-box;
-      @include element-transition(all 0.3s ease);
-    }
-    .views-widget-filter-search_api_views_fulltext {
-      position : absolute;
-      right    : 90px;
-      top      : 0;
-      z-index  : 1;
-      height   : 100px;
-      padding  : 0;
-      width    : 0;
-      .form-control {
-        height         : 100px;
-        text-transform : uppercase;
-        letter-spacing : 1px;
+    .views-field-name,
+    .views-field-title {
+      a {
+        color          : $color-main-2;
         font-family    : $font-family-main-bold;
-        font-size      : 20px;
-        padding        : 20px;
-        border-radius  : 0 !important;
-        @include box-shadow(none);
-      }
-      .input-group-addon {
-        background    : transparent;
-        border-radius : 0 !important;
-        border        : none;
+        text-transform : uppercase;
+        margin-bottom  : 10px;
+        display        : block;
       }
     }
-    .views-submit-button {
-      position   : relative;
-      background : transparent;
-      z-index    : 10;
-      padding    : 0;
-      width      : 100%;
-      height     : 100px;
-      .form-submit {
-        margin        : 0;
-        padding       : 0;
-        width         : 100%;
-        height        : 100%;
-        border-radius : 0;
-        background    : transparent;
-        border        : none;
-        font-size     : 0;
-        outline       : none !important;
-        &:after {
-          display     : block;
-          position    : absolute;
-          content     : "\f002";
-          font-family : $font-family-icon;
-          font-size   : 30px;
-          color       : $color-tertiary-2-dark;
-          width       : 100%;
-          text-align  : center;
-          top         : 30px;
-        }
-      }
-    }
-    .open-search-block {
-      .views-widget-filter-search_api_views_fulltext {
-        width       : 510px;
-        border-left : 1px solid $color-tertiary-2-dark;
-        .form-control,
-        .form-autocomplete .input-group-addon {
-          background    : $color-tertiary-1 !important;
-          border-radius : 0 !important;
-          border        : none;
-          .glyphicon {
-            color : $color-theme-3;
-          }
-        }
-      }
-      .views-submit-button {
-        background : $color-tertiary-1;
-        .form-submit:after {
-          color : $color-theme-3 !important;
-        }
-      }
-    }
-  }
-  @include breakpoint('l-') {
-    width    : 100%;
-    float    : none !important;
-    position : initial;
-    bottom   : 0;
-    top      : initial;
-    right    : 0;
-    left     : 0;
-    height   : auto;
-    overflow : hidden;
-    form {
-      width : 100%;
-      .views-exposed-widgets {
-        margin   : 0;
-        position : relative;
-      }
-      .views-widget-filter-search_api_views_fulltext {
-        right         : initial !important;
-        position      : static;
-        width         : 100% !important;
-        padding-right : 40px;
-        height        : 60px;
-        border        : none !important;
-        .form-control {
-          height       : 60px;
-          padding-left : 0;
-        }
-      }
-      .views-submit-button {
-        width    : 40px;
-        height   : 60px;
-        position : absolute;
-        right    : 0px;
-        .form-submit:after {
-          top : 13px;
-        }
-      }
-      .open-search-block {
-        .views-widget-filter-search_api_views_fulltext {
-          .form-control,
-          .form-autocomplete .input-group-addon {
-            background : transparent !important;
-            .glyphicon {
-              color : $color-tertiary-1;
-            }
-          }
-        }
-        .views-submit-button {
-          background : transparent;
-          .form-submit:after {
-            color : $color-tertiary-1 !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin carousel-block {
-  li {
-    border : none;
-    @include border-radius(0);
-  }
-  .jcarousel-control-prev,
-  .jcarousel-control-next {
-    margin-top  : -40px;
-    width       : 40px;
-    height      : 80px;
-    padding-top : 23px;
-    font-size   : 30px;
-    @include border-radius(2px);
-    @include box-shadow(none);
-    background  : rgba(0, 0, 0, 0.4);
-    &:hover {
-      background : rgba(0, 0, 0, 0.6);
-      color      : $color-tertiary-1;
-    }
-  }
-  .jcarousel-control-prev {
-    left : 0;
-  }
-  .jcarousel-control-next {
-    right : 0;
-  }
-  .jcarousel-pagination {
-    a {
-      @include box-shadow(none);
-      color      : $color-tertiary-1;
-      border     : 1px solid $color-tertiary-1;
-      background : transparent;
-      position   : relative;
-      width      : 14px;
-      height     : 14px;
-      &.active:after {
-        display       : block;
-        content       : '';
+    .views-field-picture,
+    .views-field-field-image {
+      img {
+        margin        : 0 auto;
         border-radius : 50%;
-        position      : absolute;
-        top           : 0;
-        left          : 0;
-        width         : 8px;
-        height        : 8px;
-        margin        : 2px;
-        background    : #FFF;
+        max-height    : 216px;
+        width         : auto;
+      }
+      margin-bottom : 20px;
+    }
+    .views-field-field-image {
+      img {
+        border-radius : 0;
+      }
+    }
+    .views-field-field-info,
+    .views-field-body {
+      text-overflow : ellipsis;
+      overflow      : hidden;
+      white-space   : nowrap;
+      p {
+        text-overflow : ellipsis;
+        overflow      : hidden;
+        white-space   : nowrap;
+      }
+      .views-label {
+        display : none;
       }
     }
   }
-}
-
-@mixin parallax-block {
-  background-attachment : fixed;
-  background-position   : center center;
-  background-size       : cover;
-  text-align            : center;
-  padding-left          : 15px;
-  padding-right         : 15px;
-}
-
-@mixin menu-style($color) {
-  > li {
-    position : static;
-    > a {
-      height         : 100px;
-      display        : table-cell;
-      vertical-align : middle;
-      color          : $color-tertiary-1;
-      cursor         : pointer;
-      text-transform : uppercase;
-      letter-spacing : 1px;
-      font-family    : $font-family-main-bold;
-      font-size      : 16px;
-      &:hover {
-        background-color : $color-main-2;
-        color            : $color-tertiary-1;
-      }
+  @include breakpoint('s-') {
+    .views-row {
+      width        : 100%;
+      margin-right : 0;
     }
-    &.open > ul.dropdown-menu {
-      border-top : 4px solid $color-main-2;
-    }
-    ul,
-    ul.dropdown-menu {
-      position      : absolute;
-      border        : none;
-      width         : 100%;
-      background    : $color-tertiary-2-dark;
-      color         : $color-tertiary-1;
-      //padding       : 40px 0;
-      border-radius : 0;
-      .block-block {
-        max-width : 280px;
-        float     : left;
-        margin    : 0 40px 20px 0;
-        .img-responsive {
-          border : 1px solid $color-tertiary-1;
-          @include border-radius(2px);
-        }
-        h3 {
-          @include title-style($color-main-2, 24px);
-        }
-      }
-      .container > li {
-        display       : inline-block;
-        width         : 33%;
-        float         : left;
-        padding-right : 20px;
-        > a {
-          display  : block;
-          position : relative;
-          @include title-style($color-main-2, 24px);
-          @include white-line;
-          &:hover {
-            box-shadow : none;
-          }
-        }
-        ul.dropdown-menu {
-          @include li-elem;
-          li {
-            padding       : 10px 20px 10px 0;
-            margin        : 0;
-            border-bottom : 1px solid #555;
-          }
-        }
-      }
-    }
-    &.open {
-      > a {
-        background-color : $color-main-2;
-        color            : $color-tertiary-1;
-      }
-    }
-  }
-  @include breakpoint('l-') {
-    > li {
-      ul,
-      ul.dropdown-menu {
-        padding : 0;
-        .block-block {
-          display : none;
-        }
-        .container > li {
-          display       : block;
-          width         : 100%;
-          float         : none;
-          padding-right : 0;
-          > a {
-            display  : block;
-            position : relative;
-            @include title-style($color-main-2, 24px);
-            @include white-line;
-          }
-          ul.dropdown-menu {
-            @include li-elem;
-            li {
-              padding       : 10px 0;
-              margin        : 0;
-              border-bottom : 1px solid #555;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin list-block {
-  overflow   : hidden;
-  text-align : center;
-  margin     : 100px auto;
-  .block-title {
-    @include title-style($color-tertiary-2-base, 40px);
-  }
-  @include breakpoint('m-') {
-    margin : 50px auto;
   }
 }

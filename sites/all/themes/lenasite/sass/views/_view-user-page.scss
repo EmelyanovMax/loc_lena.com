@@ -1,0 +1,26 @@
+.view-user-page {
+  max-width : 768px;
+  margin    : 40px auto 40px;
+  padding   : 15px;
+  .views-field-name {
+    text-align : center;
+    a {
+      color          : $color-main-2;
+      font-family    : $font-family-main-bold;
+      text-transform : uppercase;
+    }
+  }
+  .views-field-picture {
+    img {
+      margin        : 0 auto;
+      border-radius : 50%;
+    }
+    margin-bottom : 20px;
+  }
+  .views-field-field-info {
+    text-align : center;
+    .views-label {
+      display : none;
+    }
+  }
+}

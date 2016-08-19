@@ -1,0 +1,25 @@
+.profile {
+  max-width : 768px;
+  margin    : 40px auto 40px;
+  padding   : 15px;
+  .views-field-name {
+    a {
+      color          : $color-main-2;
+      font-family    : $font-family-main-bold;
+      text-transform : uppercase;
+    }
+  }
+  .user-picture {
+    img {
+      margin        : 0 auto;
+      border-radius : 50%;
+    }
+    margin-bottom : 20px;
+  }
+  .field-name-field-info {
+    text-align : center;
+    .field-label {
+      display : none;
+    }
+  }
+}
