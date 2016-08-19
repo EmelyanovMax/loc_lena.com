@@ -23,6 +23,7 @@
           text-transform : uppercase;
           font-family    : $font-family-main-bold;
           transition     : all 0.3s ease 0s;
+          text-shadow: 0 0 10px $color-main-2-darker;
           &:hover {
             color           : $color-main-3;
             text-decoration : none;
@@ -67,6 +68,13 @@
       ul li .views-field-title-1 {
         display : none;
       }
+    }
+  }
+  @include breakpoint('xs') {
+    .view-frontpage ul li .views-field-title a,
+    .view-frontpage ul li .views-field-title a:focus,
+    .view-frontpage ul li .views-field-title a:visited {
+      font-size : 50px;
     }
   }
 }

@@ -1,4 +1,4 @@
-body {
+html body {
     background-image  : url("../images/Untitled-1.png");
     background-repeat : repeat;
 //  background: rgba(212,146,228,0.46);
@@ -36,6 +36,16 @@ body {
   .form-actions {
     button {
       @include btn-style;
+    }
+  }
+  @include breakpoint('s-'){
+    &.admin-menu {
+      margin-top: 49px !important;
+    }
+  }
+  @include breakpoint('xs'){
+    &.admin-menu {
+      margin-top: 71px !important;
     }
   }
 }
