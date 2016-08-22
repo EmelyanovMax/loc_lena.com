@@ -61,6 +61,11 @@
       }
     }
   }
+  @include breakpoint('m-'){
+    .view-frontpage {
+      padding-top  : 45%;
+    }
+  }
   @include breakpoint('s-') {
     height : 500px;
     .view-frontpage {

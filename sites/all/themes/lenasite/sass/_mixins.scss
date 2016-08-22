@@ -164,7 +164,8 @@
       text-overflow : ellipsis;
       overflow      : hidden;
       white-space   : nowrap;
-      p {
+      p,
+      div.field-content{
         text-overflow : ellipsis;
         overflow      : hidden;
         white-space   : nowrap;
